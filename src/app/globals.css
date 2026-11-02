@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #050505;
+  --bg-elevated: #0e0e0e;
+  --text: #ffffff;
+  --muted: #a3a3a3;
+  --accent: #e10600;
+  --accent-soft: #ff2a1a;
+  --line: rgba(255, 255, 255, 0.1);
+  --background: var(--bg);
+  --foreground: var(--text);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+.font-display {
+  font-family: var(--font-display), Impact, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.section-pad {
+  padding-inline: clamp(1.25rem, 5vw, 4.5rem);
+}
+
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.red-glow {
+  text-shadow: 0 0 40px rgba(225, 6, 0, 0.35);
+}
+
+.hero-bg-word {
+  font-size: clamp(4.5rem, 18vw, 14rem);
+  line-height: 0.85;
+  user-select: none;
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.milestone-row {
+  border-bottom: 1px solid var(--line);
+  transition: border-color 0.25s ease, padding-left 0.25s ease;
+}
+
+.milestone-row:hover {
+  border-bottom-color: var(--accent);
+  padding-left: 0.5rem;
+}
+
+.project-media {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(225, 6, 0, 0.35), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.06), transparent 40%),
+    linear-gradient(145deg, #1a1a1a, #0a0a0a);
+}
