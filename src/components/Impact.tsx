@@ -13,7 +13,7 @@ export function Impact() {
               02 / The Impact
             </p>
           </BuildUnit>
-          <h2 className="mt-4 font-display text-5xl leading-[0.95] tracking-wide md:text-7xl">
+          <h2 className="mt-4 max-w-full font-display text-4xl leading-[0.95] tracking-wide sm:text-5xl md:text-7xl">
             <BuildText text="THE WORK." idPrefix="impact-h1" startOrder={1} />
             <br />
             <BuildText
@@ -27,10 +27,10 @@ export function Impact() {
           <BuildUnit id="impact-years" order={40} label="3.10+" kind="chunk" className="mt-10">
             <div className="flex items-center gap-4">
               <span className="h-px w-8 bg-[var(--accent)]" />
-              <p className="font-display text-7xl text-white md:text-8xl">3.10+</p>
+              <p className="font-display text-6xl text-white sm:text-7xl md:text-8xl">3.10+</p>
               <span className="h-px w-8 bg-[var(--accent)]" />
             </div>
-            <p className="mt-2 text-[11px] uppercase tracking-[0.28em] text-white/45">
+            <p className="mt-2 text-[11px] uppercase tracking-[0.12em] text-white/45 sm:tracking-[0.28em]">
               Years Shipping Product UI
             </p>
           </BuildUnit>
@@ -45,7 +45,7 @@ export function Impact() {
               label={item.year}
               kind="chunk"
             >
-              <div className="milestone-row flex items-start justify-between gap-6 py-6">
+              <div className="milestone-row flex flex-col gap-2 py-6 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                 <div className="max-w-md">
                   <h3 className="text-base font-medium text-white md:text-lg">{item.title}</h3>
                   <p className="mt-2 text-sm text-white/50">{item.detail}</p>

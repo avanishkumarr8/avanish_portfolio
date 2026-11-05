@@ -21,7 +21,7 @@ export function SelectedWork() {
               01 / Selected Work
             </p>
           </BuildUnit>
-          <h2 className="mt-3 font-display text-5xl tracking-wide md:text-7xl">
+          <h2 className="mt-3 max-w-full font-display text-4xl tracking-wide sm:text-5xl md:text-7xl">
             <BuildText text="WORK THAT " idPrefix="work-h1" startOrder={1} />
             <BuildText
               text="SPEAKS"
@@ -109,7 +109,7 @@ export function SelectedWork() {
                   {project.id}
                 </span>
                 <div>
-                  <h3 className="font-display text-2xl tracking-wide md:text-3xl">
+                  <h3 className="font-display text-xl leading-none tracking-wide sm:text-2xl md:text-3xl">
                     {project.title}
                   </h3>
                 </div>
@@ -123,7 +123,7 @@ export function SelectedWork() {
               label="meta"
               kind="chunk"
             >
-              <p className="text-[11px] uppercase tracking-[0.16em] text-white/45 pl-14">
+              <p className="pl-14 text-[11px] uppercase tracking-[0.12em] text-white/45 sm:tracking-[0.16em]">
                 {project.category} · {project.tags.slice(0, 3).join(" · ")}
               </p>
             </BuildUnit>

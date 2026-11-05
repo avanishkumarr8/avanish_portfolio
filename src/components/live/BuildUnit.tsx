@@ -150,7 +150,7 @@ type BuildTextProps = {
   accentClassName?: string;
 };
 
-/** Big titles — each letter types one by one */
+/** Big titles — letters type one by one, but wrap only between words */
 export function BuildText({
   text,
   idPrefix,
@@ -161,40 +161,61 @@ export function BuildText({
   accentClassName = "text-[var(--accent)]",
 }: BuildTextProps) {
   const chars = Array.from(text);
+  const nodes: ReactNode[] = [];
+  let word: ReactNode[] = [];
+
+  const flushWord = () => {
+    if (!word.length) return;
+    nodes.push(
+      <span
+        key={`word-${nodes.length}`}
+        data-build-word={`${idPrefix}-w-${nodes.length}`}
+        className="inline-flex max-w-full whitespace-nowrap"
+      >
+        {word}
+      </span>,
+    );
+    word = [];
+  };
+
+  chars.forEach((ch, i) => {
+    const unitId = `${idPrefix}-ch-${i}`;
+    if (ch === " ") {
+      flushWord();
+      nodes.push(
+        <BuildUnit
+          key={unitId}
+          id={unitId}
+          order={startOrder + i}
+          label="·"
+          as="span"
+          kind="char"
+          className="w-[0.35em]"
+        >
+          {"\u00A0"}
+        </BuildUnit>,
+      );
+      return;
+    }
+    word.push(
+      <BuildUnit
+        key={unitId}
+        id={unitId}
+        order={startOrder + i}
+        label={ch}
+        as="span"
+        kind="char"
+        className={`${letterClassName} ${accentAt === i ? accentClassName : ""}`}
+      >
+        {ch}
+      </BuildUnit>,
+    );
+  });
+  flushWord();
 
   return (
-    <span className={`inline-flex flex-wrap ${className}`}>
-      {chars.map((ch, i) => {
-        const unitId = `${idPrefix}-ch-${i}`;
-        if (ch === " ") {
-          return (
-            <BuildUnit
-              key={unitId}
-              id={unitId}
-              order={startOrder + i}
-              label="·"
-              as="span"
-              kind="char"
-              className="w-[0.35em]"
-            >
-              {"\u00A0"}
-            </BuildUnit>
-          );
-        }
-        return (
-          <BuildUnit
-            key={unitId}
-            id={unitId}
-            order={startOrder + i}
-            label={ch}
-            as="span"
-            kind="char"
-            className={`${letterClassName} ${accentAt === i ? accentClassName : ""}`}
-          >
-            {ch}
-          </BuildUnit>
-        );
-      })}
+    <span className={`inline-flex max-w-full flex-wrap items-baseline ${className}`}>
+      {nodes}
     </span>
   );
 }

@@ -10,7 +10,7 @@ export function Journey() {
         <BuildUnit id="journey-kicker" order={0} label="kicker">
           <p className="text-[11px] uppercase tracking-[0.28em] text-white/40">04 / Journey</p>
         </BuildUnit>
-        <h2 className="mt-4 font-display text-5xl leading-[0.95] tracking-wide md:text-7xl">
+        <h2 className="mt-4 max-w-full font-display text-4xl leading-[0.95] tracking-wide sm:text-5xl md:text-7xl">
           <BuildText text="KEEP MOVING." idPrefix="journey-h1" startOrder={1} />
           <br />
           <BuildText
@@ -31,7 +31,7 @@ export function Journey() {
                   {job.period}
                 </p>
                 <div>
-                  <h3 className="font-display text-3xl tracking-wide md:text-4xl">{job.role}</h3>
+                  <h3 className="font-display text-2xl tracking-wide sm:text-3xl md:text-4xl">{job.role}</h3>
                   <p className="mt-1 text-sm text-white/65">
                     {job.company} · {job.place}
                   </p>
@@ -49,7 +49,7 @@ export function Journey() {
         </div>
 
         <BuildUnit id="journey-wins" order={50} label="wins" className="lg:pt-8">
-          <h3 className="font-display text-4xl leading-none tracking-wide md:text-5xl">
+          <h3 className="max-w-full font-display text-4xl leading-none tracking-wide md:text-5xl">
             <BuildText text="LITTLE WINS." idPrefix="journey-w1" startOrder={51} />
             <br />
             <BuildText
@@ -62,7 +62,7 @@ export function Journey() {
           <ul className="mt-8 space-y-0 border-t border-white/10">
             {site.wins.map((win, i) => (
               <BuildUnit key={win.label} id={`journey-win-${i}`} order={90 + i} label={win.label}>
-                <li className="flex items-baseline justify-between gap-4 border-b border-white/10 py-4">
+                <li className="flex flex-col gap-1 border-b border-white/10 py-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
                   <span className="font-medium text-white">{win.label}</span>
                   <span className="text-xs uppercase tracking-[0.14em] text-white/40">
                     {win.note}

@@ -17,7 +17,7 @@ export function CursorPointer({ color, name, className = "" }: CursorPointerProp
         />
       </svg>
       <span
-        className="ml-4 -mt-1 inline-block whitespace-nowrap rounded-sm px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-black shadow-lg"
+        className="ml-4 -mt-1 hidden whitespace-nowrap rounded-sm px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-black shadow-lg sm:inline-block"
         style={{ backgroundColor: color }}
       >
         {name}

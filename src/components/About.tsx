@@ -10,7 +10,7 @@ export function About() {
         <BuildUnit id="about-kicker" order={0} label="kicker">
           <p className="text-[11px] uppercase tracking-[0.28em] text-white/40">03 / About</p>
         </BuildUnit>
-        <h2 className="mt-4 font-display text-4xl leading-[1.05] tracking-wide md:text-6xl lg:text-7xl">
+        <h2 className="mt-4 max-w-full font-display text-4xl leading-[1.05] tracking-wide sm:text-5xl md:text-6xl lg:text-7xl">
           <BuildText text="NOT JUST UI." idPrefix="about-h1" startOrder={1} />
           <br />
           <BuildText text="BUT HOW YOU " idPrefix="about-h2" startOrder={20} />
@@ -33,7 +33,7 @@ export function About() {
             Education & Skills
           </h3>
           <div className="mt-5 border-l border-[var(--accent)] pl-4">
-            <p className="font-display text-2xl tracking-wide">{site.education.degree}</p>
+            <p className="font-display text-xl tracking-wide sm:text-2xl">{site.education.degree}</p>
             <p className="mt-2 text-sm text-white/70">{site.education.school}</p>
             <p className="mt-1 text-xs uppercase tracking-[0.16em] text-white/40">
               {site.education.place} · {site.education.period}

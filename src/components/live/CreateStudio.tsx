@@ -32,9 +32,9 @@ function StudioChrome() {
             transition={{ duration: 0.5 }}
           >
             <div className="text-center">
-              <p className="font-display text-7xl text-white/10 md:text-9xl">A</p>
-              <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.28em] text-white/40">
-                Building page… {buildPercent}%
+              <div className="mx-auto h-3 w-3 rounded-sm bg-white shadow-[0_0_24px_rgba(255,255,255,0.45)]" />
+              <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.16em] text-white/55 sm:tracking-[0.28em]">
+                Scanning page… {buildPercent}%
               </p>
             </div>
           </motion.div>
@@ -44,7 +44,7 @@ function StudioChrome() {
       <button
         type="button"
         onClick={() => (phase === "done" ? replay() : skipToEnd())}
-        className="pointer-events-auto fixed bottom-5 right-5 z-[70] border border-white/15 bg-black/80 px-3 py-2 text-[10px] uppercase tracking-[0.18em] text-white/70 backdrop-blur-md transition hover:border-white/40 hover:text-white"
+        className="pointer-events-auto fixed right-4 z-[70] hidden border border-white/15 bg-black/80 px-3 py-2 text-[10px] uppercase tracking-[0.18em] text-white/70 backdrop-blur-md transition hover:border-white/40 hover:text-white sm:bottom-5 sm:inline-flex"
       >
         {phase === "done" ? "Replay Build" : "Skip Build"}
       </button>

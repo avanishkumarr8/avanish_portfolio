@@ -28,7 +28,7 @@ export function BuildSection({ id, children, className = "" }: BuildSectionProps
 
   return (
     <BuildSectionScope id={id}>
-      <div ref={ref} data-build-section={id} className={`relative ${className}`}>
+      <div ref={ref} data-build-section={id} className={`relative overflow-x-clip ${className}`}>
         {/* unbuilt sections stay dark/empty like video blank canvas */}
         <motion.div
           aria-hidden
@@ -43,7 +43,7 @@ export function BuildSection({ id, children, className = "" }: BuildSectionProps
         <div className={dimmed ? "pointer-events-none" : undefined}>{children}</div>
 
         {active && (
-          <div className="pointer-events-none absolute right-5 top-6 z-30 rounded-sm bg-black/70 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--accent)]">
+          <div className="pointer-events-none absolute right-3 top-20 z-30 max-w-[68%] truncate rounded-sm bg-black/70 px-2 py-1 text-right font-mono text-[10px] uppercase tracking-[0.12em] text-[var(--accent)] sm:right-5 sm:top-6 sm:max-w-none">
             agents creating · {Math.round(progress * 100)}%
           </div>
         )}

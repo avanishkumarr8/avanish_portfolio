@@ -17,7 +17,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
+      className={`fixed inset-x-0 top-0 z-[80] transition-colors duration-300 ${
         scrolled ? "bg-black/80 backdrop-blur-md border-b border-white/5" : "bg-transparent"
       }`}
     >
@@ -61,7 +61,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            className="border-t border-white/10 bg-black/95 px-6 py-6 lg:hidden"
+            className="max-h-[calc(100svh-4rem)] overflow-y-auto border-t border-white/10 bg-black/95 px-6 py-6 lg:hidden"
           >
             <div className="flex flex-col gap-4">
               {site.nav.map((item) => (

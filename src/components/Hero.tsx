@@ -8,14 +8,14 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden pb-10 pt-28 md:justify-center md:pb-16 md:pt-24"
+      className="relative flex min-h-[100svh] flex-col justify-end overflow-x-clip pb-8 pt-24 sm:pb-10 sm:pt-28 md:justify-center md:pb-16 md:pt-24"
     >
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_40%,rgba(225,6,0,0.18),transparent_55%)]"
       />
 
-      <div className="pointer-events-none absolute left-0 top-[18%] z-0 w-full md:top-[12%] md:pl-[4vw]">
+      <div className="pointer-events-none absolute inset-x-0 top-[12%] z-0 overflow-hidden px-4 md:top-[12%] md:pl-[4vw]">
         <BuildText
           text="PORTFOLIO"
           idPrefix="home-portfolio"
@@ -27,12 +27,12 @@ export function Hero() {
       <div className="section-pad relative z-10 grid items-end gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
         <div className="max-w-xl space-y-4">
           <BuildUnit id="home-eyebrow" order={20} label="eyebrow" kind="chunk">
-            <p className="text-[11px] uppercase tracking-[0.28em] text-white/50">
+            <p className="text-[11px] uppercase tracking-[0.12em] text-white/50 sm:tracking-[0.28em]">
               Delhi NCR · Available for work
             </p>
           </BuildUnit>
 
-          <h1 className="font-display text-[clamp(3.5rem,12vw,7rem)] leading-[0.9]">
+          <h1 className="max-w-full font-display text-[clamp(3.2rem,16vw,7rem)] leading-[0.9]">
             <BuildText
               text={site.brand}
               idPrefix="home-brand"
@@ -51,7 +51,7 @@ export function Hero() {
             </BuildUnit>
           </h1>
 
-          <p className="font-display text-2xl tracking-wide text-[var(--accent)] md:text-3xl">
+          <p className="max-w-full font-display text-xl tracking-wide text-[var(--accent)] sm:text-2xl md:text-3xl">
             <BuildText
               text={site.title}
               idPrefix="home-title"
@@ -66,19 +66,19 @@ export function Hero() {
             </p>
           </BuildUnit>
 
-          <div className="flex flex-wrap items-center gap-4 pt-3">
-            <BuildUnit id="home-cta-1" order={90} label="cta" kind="chunk">
+          <div className="flex flex-col gap-3 pt-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+            <BuildUnit id="home-cta-1" order={90} label="cta" kind="chunk" className="w-full sm:w-auto">
               <a
                 href="#work"
-                className="inline-flex items-center bg-[var(--accent)] px-7 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-[var(--accent-soft)]"
+                className="inline-flex w-full items-center justify-center bg-[var(--accent)] px-7 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-[var(--accent-soft)] sm:w-auto"
               >
                 View Work
               </a>
             </BuildUnit>
-            <BuildUnit id="home-cta-2" order={91} label="cta2" kind="chunk">
+            <BuildUnit id="home-cta-2" order={91} label="cta2" kind="chunk" className="w-full sm:w-auto">
               <a
                 href="#contact"
-                className="inline-flex items-center border border-white/25 px-7 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition hover:border-white/60"
+                className="inline-flex w-full items-center justify-center border border-white/25 px-7 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition hover:border-white/60 sm:w-auto"
               >
                 Hire Me
               </a>
@@ -86,7 +86,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md space-y-6 lg:mr-0">
+        <div className="relative mx-auto w-full max-w-[280px] space-y-5 sm:max-w-md sm:space-y-6 lg:mr-0">
           <BuildUnit id="home-portrait" order={100} label="portrait" kind="chunk">
             <div className="relative aspect-[4/5] overflow-hidden border border-white/10 bg-zinc-950">
               <Image
@@ -112,10 +112,10 @@ export function Hero() {
                 kind="chunk"
                 className="text-center"
               >
-                <p className="font-display text-3xl text-[var(--accent)] md:text-4xl">
+                <p className="font-display text-2xl text-[var(--accent)] sm:text-3xl md:text-4xl">
                   {stat.value}
                 </p>
-                <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-white/45">
+                <p className="mt-1 text-[10px] uppercase tracking-[0.12em] text-white/45 sm:tracking-[0.22em]">
                   {stat.label}
                 </p>
               </BuildUnit>

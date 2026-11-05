@@ -26,7 +26,7 @@ export function Contact() {
               05 / Contact
             </p>
           </BuildUnit>
-          <h2 className="mt-4 font-display text-5xl leading-[0.95] tracking-wide md:text-7xl lg:text-8xl">
+          <h2 className="mt-4 max-w-full font-display text-4xl leading-[0.95] tracking-wide sm:text-5xl md:text-7xl lg:text-8xl">
             <BuildText text="LET'S WORK" idPrefix="contact-h1" startOrder={1} />
             <br />
             <BuildText
@@ -47,12 +47,12 @@ export function Contact() {
           <BuildUnit id="contact-cta" order={45} label="cta" className="mt-8">
             <a
               href={`mailto:${site.email}`}
-              className="inline-flex items-center gap-3 border border-white/20 px-2 py-2 pr-6 transition hover:border-[var(--accent)]"
+              className="inline-flex max-w-full items-center gap-3 border border-white/20 px-2 py-2 pr-4 transition hover:border-[var(--accent)] sm:pr-6"
             >
-              <span className="flex h-11 w-11 items-center justify-center bg-[var(--accent)] text-lg">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center bg-[var(--accent)] text-lg">
                 →
               </span>
-              <span className="text-[11px] uppercase tracking-[0.22em]">
+              <span className="text-[11px] uppercase tracking-[0.12em] sm:tracking-[0.22em]">
                 Start a Conversation
               </span>
             </a>
@@ -67,7 +67,7 @@ export function Contact() {
                   </span>
                   <a
                     href={item.href}
-                    className="text-sm text-white/80 transition hover:text-[var(--accent)]"
+                    className="min-w-0 break-all text-sm text-white/80 transition hover:text-[var(--accent)] sm:break-normal"
                     target={item.href.startsWith("http") ? "_blank" : undefined}
                     rel={item.href.startsWith("http") ? "noreferrer" : undefined}
                   >

@@ -28,13 +28,15 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body), system-ui, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
+  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
 }
 
 ::selection {
@@ -48,7 +50,7 @@ body {
 }
 
 .section-pad {
-  padding-inline: clamp(1.25rem, 5vw, 4.5rem);
+  padding-inline: clamp(1rem, 5vw, 4.5rem);
 }
 
 .grain {
@@ -65,8 +67,9 @@ body {
 }
 
 .hero-bg-word {
-  font-size: clamp(4.5rem, 18vw, 14rem);
+  font-size: clamp(2.35rem, 16vw, 14rem);
   line-height: 0.85;
+  max-width: 100%;
   user-select: none;
 }
 
@@ -101,6 +104,14 @@ body {
 .milestone-row:hover {
   border-bottom-color: var(--accent);
   padding-left: 0.5rem;
+}
+
+@media (max-width: 1023px) {
+  h1,
+  h2,
+  h3 {
+    overflow-wrap: anywhere;
+  }
 }
 
 .project-media {
