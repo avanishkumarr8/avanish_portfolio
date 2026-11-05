@@ -5,12 +5,12 @@ import { BuildText, BuildUnit } from "@/components/live/BuildUnit";
 
 export function Journey() {
   return (
-    <section id="journey" className="section-pad border-t border-white/10 py-20 md:py-28">
+    <section id="journey" className="section-pad border-t border-white/10 py-16 sm:py-20 md:py-28">
       <div className="mb-12 max-w-3xl">
         <BuildUnit id="journey-kicker" order={0} label="kicker">
           <p className="text-[11px] uppercase tracking-[0.28em] text-white/40">04 / Journey</p>
         </BuildUnit>
-        <h2 className="mt-4 max-w-full font-display text-4xl leading-[0.95] tracking-wide sm:text-5xl md:text-7xl">
+        <h2 className="mt-4 max-w-full font-display text-4xl leading-[0.95] tracking-wide sm:text-5xl lg:text-7xl">
           <BuildText text="KEEP MOVING." idPrefix="journey-h1" startOrder={1} />
           <br />
           <BuildText
@@ -22,7 +22,7 @@ export function Journey() {
         </h2>
       </div>
 
-      <div className="grid gap-14 lg:grid-cols-[1.2fr_0.8fr]">
+      <div className="grid gap-12 md:grid-cols-[1.15fr_0.85fr] md:gap-10 lg:gap-14">
         <div className="space-y-10">
           {site.experience.map((job, i) => (
             <BuildUnit key={job.company} id={`journey-job-${i}`} order={40 + i} label={job.role}>

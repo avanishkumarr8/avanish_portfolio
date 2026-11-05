@@ -29,6 +29,8 @@
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
+  scroll-padding-top: 5rem;
+  scroll-padding-bottom: 6.5rem;
 }
 
 body {
@@ -67,7 +69,6 @@ body {
 }
 
 .hero-bg-word {
-  font-size: clamp(2.35rem, 16vw, 14rem);
   line-height: 0.85;
   max-width: 100%;
   user-select: none;

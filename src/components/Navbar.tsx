@@ -27,7 +27,7 @@ export function Navbar() {
           <span className="text-[var(--accent)]"> +</span>
         </a>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav className="hidden items-center gap-4 md:flex lg:gap-7">
           {site.nav.map((item) => (
             <a
               key={item.href}
@@ -42,7 +42,7 @@ export function Navbar() {
         <button
           type="button"
           aria-label="Toggle menu"
-          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           <span
@@ -61,7 +61,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            className="max-h-[calc(100svh-4rem)] overflow-y-auto border-t border-white/10 bg-black/95 px-6 py-6 lg:hidden"
+            className="max-h-[calc(100svh-4rem)] overflow-y-auto border-t border-white/10 bg-black/95 px-6 py-6 md:hidden"
           >
             <div className="flex flex-col gap-4">
               {site.nav.map((item) => (

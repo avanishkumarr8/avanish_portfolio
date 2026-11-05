@@ -35,9 +35,9 @@ export function EditorDock() {
       initial={{ y: 40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.2, duration: 0.45 }}
-      className="pointer-events-auto fixed inset-x-3 z-[60] flex max-w-[calc(100vw-1.5rem)] items-center gap-2 rounded-2xl border border-white/10 bg-[#0c0c0c]/95 px-2 py-2 shadow-[0_20px_60px_rgba(0,0,0,0.65)] backdrop-blur-xl bottom-[max(0.75rem,env(safe-area-inset-bottom))] sm:inset-x-auto sm:bottom-5 sm:left-1/2 sm:w-max sm:-translate-x-1/2 sm:px-3"
+      className="pointer-events-auto fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-[60] flex max-w-[calc(100vw-1.5rem)] items-center gap-2 rounded-2xl border border-white/10 bg-[#0c0c0c]/95 px-2 py-2 shadow-[0_20px_60px_rgba(0,0,0,0.65)] backdrop-blur-xl sm:inset-x-auto sm:bottom-5 sm:left-1/2 sm:w-max sm:max-w-[calc(100vw-2rem)] sm:-translate-x-1/2 sm:px-3"
     >
-      <div className="hidden items-center gap-1 border-r border-white/10 pr-3 sm:flex">
+      <div className="hidden items-center gap-1 border-r border-white/10 pr-3 lg:flex">
         {tools.map((tool, i) => (
           <button
             key={tool}

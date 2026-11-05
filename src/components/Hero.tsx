@@ -8,23 +8,23 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[100svh] flex-col justify-end overflow-x-clip pb-8 pt-24 sm:pb-10 sm:pt-28 md:justify-center md:pb-16 md:pt-24"
+      className="relative flex min-h-[100svh] flex-col justify-end overflow-x-clip pb-28 pt-24 sm:pb-32 sm:pt-28 md:justify-center md:pb-36 md:pt-24"
     >
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_40%,rgba(225,6,0,0.18),transparent_55%)]"
       />
 
-      <div className="pointer-events-none absolute inset-x-0 top-[12%] z-0 overflow-hidden px-4 md:top-[12%] md:pl-[4vw]">
+      <div className="pointer-events-none absolute inset-x-0 top-16 z-0 hidden overflow-hidden px-4 md:block lg:top-[7%] lg:pl-[4vw]">
         <BuildText
           text="PORTFOLIO"
           idPrefix="home-portfolio"
           startOrder={0}
-          className="hero-bg-word font-display justify-center text-[var(--accent)] md:justify-start"
+          className="hero-bg-word font-display justify-center text-[clamp(2rem,8vw,4.5rem)] text-[var(--accent)] md:justify-start lg:text-[clamp(2.35rem,16vw,14rem)]"
         />
       </div>
 
-      <div className="section-pad relative z-10 grid items-end gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
+      <div className="section-pad relative z-10 grid items-end gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-center md:gap-8">
         <div className="max-w-xl space-y-4">
           <BuildUnit id="home-eyebrow" order={20} label="eyebrow" kind="chunk">
             <p className="text-[11px] uppercase tracking-[0.12em] text-white/50 sm:tracking-[0.28em]">
@@ -32,7 +32,7 @@ export function Hero() {
             </p>
           </BuildUnit>
 
-          <h1 className="max-w-full font-display text-[clamp(3.2rem,16vw,7rem)] leading-[0.9]">
+          <h1 className="max-w-full font-display text-[clamp(2.7rem,11vw,7rem)] leading-[0.9]">
             <BuildText
               text={site.brand}
               idPrefix="home-brand"
@@ -102,7 +102,7 @@ export function Hero() {
             </div>
           </BuildUnit>
 
-          <div className="flex justify-between gap-4 border-t border-white/10 pt-5">
+          <div className="flex justify-between gap-2 border-t border-white/10 pt-5 sm:gap-4">
             {site.stats.map((stat, i) => (
               <BuildUnit
                 key={stat.label}
@@ -110,7 +110,7 @@ export function Hero() {
                 order={110 + i}
                 label={stat.label}
                 kind="chunk"
-                className="text-center"
+                className="min-w-0 flex-1 text-center"
               >
                 <p className="font-display text-2xl text-[var(--accent)] sm:text-3xl md:text-4xl">
                   {stat.value}

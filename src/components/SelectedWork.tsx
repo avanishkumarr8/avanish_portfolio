@@ -13,7 +13,7 @@ export function SelectedWork() {
   );
 
   return (
-    <section id="work" className="section-pad border-t border-white/10 py-20 md:py-28">
+    <section id="work" className="section-pad border-t border-white/10 py-16 sm:py-20 md:py-28">
       <div className="mb-10 flex flex-col gap-6 md:mb-14 md:flex-row md:items-end md:justify-between">
         <div>
           <BuildUnit id="work-kicker" order={0} label="kicker" kind="chunk">
@@ -21,7 +21,7 @@ export function SelectedWork() {
               01 / Selected Work
             </p>
           </BuildUnit>
-          <h2 className="mt-3 max-w-full font-display text-4xl tracking-wide sm:text-5xl md:text-7xl">
+          <h2 className="mt-3 max-w-full font-display text-4xl tracking-wide sm:text-5xl lg:text-7xl">
             <BuildText text="WORK THAT " idPrefix="work-h1" startOrder={1} />
             <BuildText
               text="SPEAKS"
@@ -61,7 +61,7 @@ export function SelectedWork() {
         </div>
       </BuildUnit>
 
-      <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <article key={project.id} className="group space-y-4">
             {/* media chunk */}
@@ -90,7 +90,7 @@ export function SelectedWork() {
                     />
                   ) : null}
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/20" />
-                  <span className="absolute right-4 top-4 z-10 bg-black/55 px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-white/80 backdrop-blur-sm">
+                  <span className="absolute right-3 top-3 z-10 max-w-[70%] bg-black/55 px-2 py-1 text-right text-[10px] uppercase leading-tight tracking-[0.12em] text-white/80 backdrop-blur-sm sm:right-4 sm:top-4 sm:tracking-[0.2em]">
                     {project.period}
                   </span>
                 </div>

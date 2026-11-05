@@ -44,7 +44,7 @@ function StudioChrome() {
       <button
         type="button"
         onClick={() => (phase === "done" ? replay() : skipToEnd())}
-        className="pointer-events-auto fixed right-4 z-[70] hidden border border-white/15 bg-black/80 px-3 py-2 text-[10px] uppercase tracking-[0.18em] text-white/70 backdrop-blur-md transition hover:border-white/40 hover:text-white sm:bottom-5 sm:inline-flex"
+        className="pointer-events-auto fixed bottom-24 right-4 z-[70] hidden border border-white/15 bg-black/80 px-3 py-2 text-[10px] uppercase tracking-[0.18em] text-white/70 backdrop-blur-md transition hover:border-white/40 hover:text-white lg:inline-flex"
       >
         {phase === "done" ? "Replay Build" : "Skip Build"}
       </button>

@@ -5,12 +5,12 @@ import { BuildText, BuildUnit } from "@/components/live/BuildUnit";
 
 export function About() {
   return (
-    <section id="about" className="section-pad border-t border-white/10 py-20 md:py-28">
+    <section id="about" className="section-pad border-t border-white/10 py-16 sm:py-20 md:py-28">
       <div className="mb-14 max-w-4xl">
         <BuildUnit id="about-kicker" order={0} label="kicker">
           <p className="text-[11px] uppercase tracking-[0.28em] text-white/40">03 / About</p>
         </BuildUnit>
-        <h2 className="mt-4 max-w-full font-display text-4xl leading-[1.05] tracking-wide sm:text-5xl md:text-6xl lg:text-7xl">
+        <h2 className="mt-4 max-w-full font-display text-4xl leading-[1.05] tracking-wide sm:text-5xl lg:text-7xl">
           <BuildText text="NOT JUST UI." idPrefix="about-h1" startOrder={1} />
           <br />
           <BuildText text="BUT HOW YOU " idPrefix="about-h2" startOrder={20} />
@@ -27,7 +27,7 @@ export function About() {
         </BuildUnit>
       </div>
 
-      <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr_0.85fr]">
+      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1fr_1.1fr_0.85fr]">
         <BuildUnit id="about-edu" order={60} label="education">
           <h3 className="text-[11px] uppercase tracking-[0.24em] text-white/40">
             Education & Skills
@@ -76,7 +76,7 @@ export function About() {
           </ol>
         </BuildUnit>
 
-        <BuildUnit id="about-quote" order={100} label="quote">
+        <BuildUnit id="about-quote" order={100} label="quote" className="md:col-span-2 lg:col-span-1">
           <aside className="flex min-h-[280px] flex-col justify-between bg-[var(--accent)] p-7 text-white md:p-8">
             <p className="font-display text-3xl leading-tight tracking-wide md:text-4xl">
               “{site.quote}”

@@ -5,15 +5,15 @@ import { BuildText, BuildUnit } from "@/components/live/BuildUnit";
 
 export function Impact() {
   return (
-    <section id="impact" className="section-pad border-t border-white/10 py-20 md:py-28">
-      <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+    <section id="impact" className="section-pad border-t border-white/10 py-16 sm:py-20 md:py-28">
+      <div className="grid gap-12 md:grid-cols-[0.9fr_1.1fr] md:gap-14 lg:gap-20">
         <div>
           <BuildUnit id="impact-kicker" order={0} label="kicker" kind="chunk">
             <p className="text-[11px] uppercase tracking-[0.28em] text-white/40">
               02 / The Impact
             </p>
           </BuildUnit>
-          <h2 className="mt-4 max-w-full font-display text-4xl leading-[0.95] tracking-wide sm:text-5xl md:text-7xl">
+          <h2 className="mt-4 max-w-full font-display text-4xl leading-[0.95] tracking-wide sm:text-5xl lg:text-7xl">
             <BuildText text="THE WORK." idPrefix="impact-h1" startOrder={1} />
             <br />
             <BuildText

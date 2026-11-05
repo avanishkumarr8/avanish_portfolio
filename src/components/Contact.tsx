@@ -18,15 +18,15 @@ const contacts = [
 
 export function Contact() {
   return (
-    <section id="contact" className="section-pad border-t border-white/10 py-20 md:py-28">
-      <div className="grid items-end gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+    <section id="contact" className="section-pad border-t border-white/10 py-16 sm:py-20 md:py-28">
+      <div className="grid items-end gap-12 md:grid-cols-[1.05fr_0.95fr] md:gap-10">
         <div>
           <BuildUnit id="contact-kicker" order={0} label="kicker">
             <p className="text-[11px] uppercase tracking-[0.28em] text-white/40">
               05 / Contact
             </p>
           </BuildUnit>
-          <h2 className="mt-4 max-w-full font-display text-4xl leading-[0.95] tracking-wide sm:text-5xl md:text-7xl lg:text-8xl">
+          <h2 className="mt-4 max-w-full font-display text-4xl leading-[0.95] tracking-wide sm:text-5xl lg:text-7xl">
             <BuildText text="LET'S WORK" idPrefix="contact-h1" startOrder={1} />
             <br />
             <BuildText
@@ -93,7 +93,7 @@ export function Contact() {
             <div className="absolute inset-0 flex flex-col justify-between p-7 md:p-9">
               <p className="text-[11px] uppercase tracking-[0.24em] text-white/45">Profile</p>
               <div>
-                <p className="font-display text-4xl tracking-wide md:text-5xl">
+                <p className="font-display text-3xl tracking-wide sm:text-4xl md:text-5xl">
                   <BuildText text="MAKE IT" idPrefix="contact-m1" startOrder={80} />
                   <br />
                   <BuildText
